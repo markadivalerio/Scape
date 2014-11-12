@@ -1,0 +1,8 @@
+* DESCRIPTION:
+* Start of lvl: "level #" or "level [name]"
+* Level Size Width Height: "128 360"
+* Level comments/tips/hints
+* Level Start: level objects (1 Object per line)
+* ...
+* [Spot name] [xrow] [ycol] [extra info]
+* ...

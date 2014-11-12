@@ -1,0 +1,35 @@
+* DESCRIPTION:
+* Start of lvl: "level #" or "level [name]"
+* Level Size Width Height: "384 384" (16x24 = 384 = default size)
+* Level comments/tips/hints
+* Level Start: level objects (1 Object per line)
+* 1 START 0 0 16 16
+* 2 FINISH 368 368 16 16
+* ...
+* [unique id #] [Spot] [gridxcol] [gridyrow] [gridxsize] [gridysize]
+* [unique id #] [option1]
+* [unique id #] [option2] ...
+* options: LINK, TIME, PATH, DISPLAY, AREA, VALUE, REFRESH, REUSE, ACTION, INVERTED
+* 
+* LINK[uid#, #, #]: linked to another object on the map with the given unique ids',
+* TIME[1,5,9]: timer needed for this spot (i.e. bomb when it explodes)...numbers can range from 1 to 64.
+* TIME[start#-stop#]
+* PATH[x,y,time]: position and time when (1-64) a spot/object moves (must be in order)
+* DISPLAY[invisible/illusion]: special display options if the spot is hidden or a fake
+* AREA[xwidth, yheight]: Area the spot affects outside its own location (i.e. gravity well), with location at center
+* AREA[leftWidth, rightWidth, topHeight, bottomHeight]: Custom area spot affects with spot's location at center.
+* VALUE[#]: specific value associated with an item or quantity
+* REFRESH[yes/no]: for items and gates and obsticals, does it reset on player's death?
+* REUSE[#]: for switches or teleports, can you activate spot more than once?
+* ACTION[enters, exits, invertedEnters, invertedExits]: for switches/teleports/bombs, when to perform the spot's action
+* INVERTED[yes/no]: inverts the default action of a spot (GravityWell=pushes, Switch=default is ON, etc)
+* ...
+level 1
+384 384
+Navigate to the Finish Square by clicking around the maze.
+1 START 0 0 16 16
+2 FINISH 368 368 16 16
+3 WALL 64 64 16 16
+4 BOMB 128 128 8 8 
+4 TIME[1-8]
+4 TIME[33-48]
